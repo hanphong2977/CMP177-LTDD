@@ -26,12 +26,32 @@ void main() {
     }
 
     // Nhập hệ số b
-    stdout.write("Nhập hệ số b: ");
-    double b = double.parse(stdin.readLineSync() ?? "0");
+    double b;
+    while (true) {
+      stdout.write("Nhập hệ số b: ");
+      String? input = stdin.readLineSync();
+      double? parsedValue = double.tryParse(input ?? '');
+      if (parsedValue != null) {
+        b = parsedValue;
+        break;
+      } else {
+        print("Giá trị nhập không hợp lệ. Vui lòng nhập một số.");
+      }
+    }
 
     // Nhập hệ số c
-    stdout.write("Nhập hệ số c: ");
-    double c = double.parse(stdin.readLineSync() ?? "0");
+    double c;
+    while (true) {
+      stdout.write("Nhập hệ số c: ");
+      String? input = stdin.readLineSync();
+      double? parsedValue = double.tryParse(input ?? '');
+      if (parsedValue != null) {
+        c = parsedValue;
+        break;
+      } else {
+        print("Giá trị nhập không hợp lệ. Vui lòng nhập một số.");
+      }
+    }
 
     // Giải phương trình
     solveQuadraticEquation(a, b, c);
