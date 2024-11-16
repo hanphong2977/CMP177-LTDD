@@ -74,15 +74,18 @@ void solveQuadraticEquation(double a, double b, double c) {
   print("Delta = ${delta.toStringAsFixed(2)}");
 
   if (delta > 0) {
+    // Phương trình có hai nghiệm phân biệt
     double x1 = (-b + sqrt(delta)) / (2 * a);
     double x2 = (-b - sqrt(delta)) / (2 * a);
     print("Phương trình có hai nghiệm phân biệt:");
     print("x1 = ${x1.toStringAsFixed(2)}");
     print("x2 = ${x2.toStringAsFixed(2)}");
   } else if (delta == 0) {
+    //  Phương trình có nghiệm kép
     double x = -b / (2 * a);
     print("Phương trình có nghiệm kép: x = ${x.toStringAsFixed(2)}");
   } else {
+    // Phương trình vô nghiệm
     double realPart = -b / (2 * a);
     double imaginaryPart = sqrt(-delta) / (2 * a);
     print("Phương trình có hai nghiệm phức:");
