@@ -26,6 +26,7 @@ class ThuVien {
     print("Danh sách sách trong thư viện:");
     for (var sach in _danhSachSach) {
       sach.hienThiThongTinSach();
+      print("\n__________________");
     }
   }
 }
