@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'dart:io';
 
 void main() {
@@ -7,6 +8,7 @@ void main() {
   int tuoi = 21; // Khai bao ro rang kieu
 
   // Su dung null safety
+  // ignore: unused_local_variable
   String? tenNullable;
   tenNullable = null; // Cho phep null
 
@@ -27,5 +29,6 @@ void main() {
 
   // Kiem tra bien Nullable
   int? soLuong;
+  // ignore: unnecessary_null_comparison
   assert(soLuong == null);
 }
